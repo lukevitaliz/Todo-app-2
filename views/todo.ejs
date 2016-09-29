@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link href="/styles.css" rel="stylesheet" type="text/css">
+  <div>
+
+    <h1><%= title %></h1>
+    
+    <p>This is a simple todo app.<p>
+
+    <div>
+      <form action="/" method="POST">
+      <input type="text" placeholder="Enter items" name="todos">
+      <div><button type="submit">Add</button></div>
+      </form>
+    </div>
+
+    <div>
+      <form action="/" method="PATCH">
+      <div><button type="submit">Edit</button></div>
+      </form>
+    </div>
+
+    <div>
+      <form action="/" method="DELETE">
+      <div><button type="submit">delete</button></div>
+      </form>
+    </div>
+    <div>
+
+      <ul>
+        <% for(var i=0; i<result.length; i++) { %>
+          <li>
+            <input type="checkbox" />
+            <%= result[i].task %>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

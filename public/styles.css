@@ -1,0 +1,22 @@
+li {
+  cursor: pointer;
+  border: 2px solid #a1a1a1;
+  background: #000;
+  color: #fff;
+}
+.completed {
+  text-decoration: line-through;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+}
