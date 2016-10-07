@@ -1,17 +1,8 @@
 li {
   cursor: pointer;
-  border: 2px solid #a1a1a1;
-  background: #000;
-  color: #fff;
-}
-.completed {
-  text-decoration: line-through;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
+  border: 2px solid  #000 ;
+  background: #fff;
+  color: #000;
 }
 
 ul {
@@ -19,4 +10,20 @@ ul {
   padding: 0;
   margin: 0;
   width: 200px;
+}
+
+#edit{
+ display: true;
+}
+
+#update{
+  display: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.shown{
+  display: true;
 }

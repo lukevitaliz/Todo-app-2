@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <div>
+    <h1>A Simple To-Do App</h1>
+    <p>Add things you want to do.<p>
+  </div>
+</head>
+
 <body>
 <link href="/styles.css" rel="stylesheet" type="text/css">
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="public/scripts.js"></script>
   <div>
-
-    <h1><%= title %></h1>
-    
-    <p>This is a simple todo app.<p>
-
     <div>
       <form action="/" method="POST">
       <input type="text" placeholder="Enter items" name="todos">
-      <div><button type="submit">Add</button></div>
-      </form>
-    </div>
-
-    <div>
-      <form action="/" method="PATCH">
-      <div><button type="submit">Edit</button></div>
-      </form>
-    </div>
-
-    <div>
-      <form action="/" method="DELETE">
-      <div><button type="submit">delete</button></div>
+      <button type="submit">Add</button>
       </form>
     </div>
     <div>
-
       <ul>
         <% for(var i=0; i<result.length; i++) { %>
           <li>
-            <input type="checkbox" />
-            <%= result[i].task %>
+            <div><input type="checkbox"/>
+              <%= result[i].task %>
+            </div>
+            <div id="update">
+              <form action="/update/:task" method="POST">
+                <input type="text" placeholder="Enter items" name="updatedTodos">
+                <button type="submit">
+                  Update
+                </button>
+              </form>
+            </div>
+            <div id="edit"><a href="/edit/<%=result[i].task%>"><button>Edit</button></a> 
+            <a href="/delete/<%=result[i].task%>"><button id="edit" value="Edit Data">Delete</button></a></div>
           </li>
         <% } %>
       </ul>
     </div>
   </div>
+<script src =""
+<script src="public/scripts.js"></script>
 </body>
 </html>
