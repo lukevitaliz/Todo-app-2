@@ -52,20 +52,14 @@ router.get('/delete/:task', (req, res) => {
   })
 })
 
-router.get('/edit/:task', (req, res) => {
-  let value = req.params.task
-  db('todos').where('task', value).update()
-
-})
-
 router.post('/update/:task', (req, res) => {
-  let todos = req.body.todos
-  db('todos').insert({ task: todos })
+  let value = req.params.task
+  let todos = req.body.updatedTodos
+  db('todos').where("task", value).update({ task: todos })
   .then(result => {
-    console.log(result)
     db.select('task').from('todos').then(function(result){
-    res.render('todo', { result })
-    console.log(result)
+      res.render('todo', { result })
+      console.log(result)
    })
   })
   .catch(err => {

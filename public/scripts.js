@@ -1,5 +1,5 @@
 $(function() {
-
-    alert("eat my socks")
-
-});
+  $('#edit').click(function() {
+    $("#update").show()
+  })
+})

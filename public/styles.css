@@ -12,18 +12,26 @@ ul {
   width: 200px;
 }
 
+h1 {
+  font-style: italic;
+}
+/*
 #edit{
  display: true;
 }
 
 #update{
-  display: none;
-}
-
-.hidden{
-  display: none;
-}
-
-.shown{
   display: true;
 }
+
+#hidden{
+  display: none;
+}
+
+#shown{
+  display: true;
+}
+
+.task{
+    text-decoration: line-through;
+    font-style: italic;*/

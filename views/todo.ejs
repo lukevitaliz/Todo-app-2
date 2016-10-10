@@ -9,8 +9,6 @@
 
 <body>
 <link href="/styles.css" rel="stylesheet" type="text/css">
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="public/scripts.js"></script>
   <div>
     <div>
       <form action="/" method="POST">
@@ -22,25 +20,23 @@
       <ul>
         <% for(var i=0; i<result.length; i++) { %>
           <li>
-            <div><input type="checkbox"/>
-              <%= result[i].task %>
+            <div>
+              <p class="task"><%= result[i].task %></p>
             </div>
-            <div id="update">
-              <form action="/update/:task" method="POST">
+            <div>
+              <form action="/update/<%=result[i].task%>" method="POST">
                 <input type="text" placeholder="Enter items" name="updatedTodos">
                 <button type="submit">
                   Update
                 </button>
               </form>
-            </div>
-            <div id="edit"><a href="/edit/<%=result[i].task%>"><button>Edit</button></a> 
-            <a href="/delete/<%=result[i].task%>"><button id="edit" value="Edit Data">Delete</button></a></div>
+            <a href="/delete/<%=result[i].task%>"><button>Delete</button></a></div>
           </li>
         <% } %>
       </ul>
     </div>
   </div>
-<script src =""
-<script src="public/scripts.js"></script>
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
